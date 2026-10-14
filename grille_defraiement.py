@@ -1831,7 +1831,7 @@ def run_gui():
 
 def run_cli(argv):
     import argparse
-    ap = argparse.ArgumentParser(description="Grille de défraiement tchou-tchou (mode texte)")
+    ap = argparse.ArgumentParser(description="Grille de défraiement train (mode texte)")
     ap.add_argument("--ville", required=True)
     ap.add_argument("--gare", default="")
     ap.add_argument("--aller", required=True, help="date du vendredi, JJ/MM/AAAA")
