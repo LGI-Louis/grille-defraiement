@@ -1,0 +1,6 @@
+# Corrections de gares (facultatif)
+# Si une ville est associee a une mauvaise gare dans l onglet "Detail villes",
+# ajoutez une ligne :  code INSEE de la ville;nom de la gare a utiliser
+# Le code INSEE figure dans l onglet "Detail villes". Exemple :
+# 92012;Paris Montparnasse
+code_insee;gare
