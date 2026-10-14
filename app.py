@@ -29,7 +29,7 @@ import streamlit as st
 
 import grille_defraiement as G
 
-st.set_page_config(page_title="Grille de défraiement train", page_icon="🚆", layout="centered")
+st.set_page_config(page_title="Grille de défraiement tchou-tchou", layout="centered")
 
 WEB_RESULTS = os.path.join(G.BASE_DIR, "resultats_web")
 FIELDS = ("ville", "gare", "date_aller", "heure_aller", "date_retour", "heure_retour",
@@ -252,9 +252,8 @@ def page_form(mgr, api_key):
     hr = h2.time_input("Trains retour à partir de", value=dt.time(16, 0), step=900)
     hl = h3.time_input("Trains jusqu'à", value=dt.time(23, 59), step=60)
     arrondi = st.selectbox("Arrondir le montant", list(G.ARRONDIS), index=1)
-    with st.expander("Option : limiter à quelques départements (pour un essai rapide)"):
-        deps = st.text_input("Départements", placeholder="ex. 13, 69 — laisser vide pour toute la France "
-                                                          "métropolitaine")
+    with st.expander("Option : limiter à quelques départements"):
+        deps = st.text_input("Départements", placeholder="ex. 13, 69 — laisser vide pour toute la France métropolitaine")
 
     aller, retour = st.session_state["aller"], st.session_state["retour"]
     if aller.weekday() != 4:
